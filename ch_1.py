@@ -13,7 +13,8 @@ from tensorflow import keras
 import numpy as np
 import matplotlib
 matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+# import matplotlib.pyplot as plt
 
 print(tf.__version__)
 
@@ -23,3 +24,28 @@ fashion_mnist = keras.datasets.fashion_mnist
 
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+
+print(train_images.shape)
+
+print(len(train_labels))
+
+print(train_labels)
+
+print(test_images.shape)
+
+
+print(len(test_labels))
+
+plt.figure()
+plt.imshow(train_images[50], dtype='unit64')
+plt.colorbar()
+plt.grid(False)
+plt.show()
+
+# data = [[0, 0.25], [0.5, 0.75]]
+
+# fig, ax = plt.subplots()
+# im = ax.imshow(data, cmap=plt.get_cmap('hot'), interpolation='nearest',
+#                vmin=0, vmax=1)
+# fig.colorbar(im)
+# plt.show()
